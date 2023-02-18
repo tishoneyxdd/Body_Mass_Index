@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .two{
+            text-align: center;     
+        }
+    </style>
+    <link rel="stylesheet" href="csshtml.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H3><B>B</B>ody <B>M</B>ass <B>I</B>ndex Calculator</H3>
+    <Form name="Form" Class="Form" Id="Form" onclick="return(calcBMI())">
+    <Div Class="Row-One">
+        <P Class="Text">Age</P><Input Type="Text" name="age" Class="Text-Input" Id="Age">
+      <Label Class="Container">
+        <P Class="Text">Female</P><Input Type="Radio" Name="Radio" Id="F">
+        <Span Class="Checkmark"></Span>
+      </Label>
+      <Label Class="Container">
+        <P Class="Text">Male</P><Input Type="Radio" Name="Radio" Id="M">
+        <Span Class="Checkmark"></Span>
+      </Label>
+      </Div>
+    
+    <Div Class="Row-Two">
+        <P Class="Text">Height(inch)</P><Input Type="Text" name="height" Class="Text-Input" Id="Height">
+         <P Class="Text">Weight(pounds)</P><Input Type="Text" name="weight" Class="Text-Input" Id="Weight">
+    </Div>
+    <Button Type="Button" id="Submit" >Submit</Button>
+<br><br><br>
+			</fieldset>
+			<fieldset>
+			<legend><h5>BMI </h5></legend>
+				<label for="bmi" id="bmi_label">Your calculated BMI is:</label>
+				<input type="text" name="bmi" id="bmi" readonly="readonly">
+			</fieldset>
+
+    </Form>
+    <script>
+function calcBMI() {
+  var weight = document.Form.weight.value;
+  var height = document.Form.height.value;
+  document.Form.bmi.value = parseInt((weight * 703) / (height * height));
+  return false;
+}
+    </script>
+</body>
+</html>
